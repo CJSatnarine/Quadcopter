@@ -1,5 +1,6 @@
 #define joyX A0
 #define joyY A1
+#define button 2
 
 void setup() {
   Serial.begin(9600);
@@ -10,12 +11,14 @@ void setup() {
 void loop(){
   int xValue = analogRead(joyX);
   int yValue = analogRead(joyY);
-  int homePosition = 90;
 
-  int xMap = map(xValue, 0, 1080, 0, 180);
-  int yMap = map(yValue, 0, 1080, 0, 180);
+  int xMap = map(xValue, 0, 1023, 0, 180);
+  int yMap = map(yValue, 0, 1023, 0, 180);
 
-  Serial.println(xMap, yMap);
+  Serial.print("xPos: ");
+  Serial.println(xMap);
+  Serial.print("yPos: ");
+  Serial.println(yMap);
 
 //  //Print the values of x and y. 
 //  Serial.print(xValue);
