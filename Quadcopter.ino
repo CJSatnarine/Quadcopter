@@ -10,7 +10,7 @@ void setup()
 void loop()
 {
   digitalWrite(motor, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
+  delay(1000); // Wait for 1 second.
   digitalWrite(motor, LOW);
-  delay(10000); // Wait for 10000 millisecond(s)
+  delay(10000); // Wait for 10 seconds.
 }
